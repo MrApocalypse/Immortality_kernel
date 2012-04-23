@@ -1,0 +1,18 @@
+--- drivers/cpufreq/cpufreq.c	2010-10-05 18:13:41.000000000 +0800
++++ drivers/cpufreq/cpufreq.c	2010-11-15 23:43:10.954887003 +0800
+@@ -766,6 +786,7 @@
+ define_one_rw(scaling_min_freq);
+ define_one_rw(scaling_max_freq);
+ define_one_rw(scaling_governor);
++define_one_rw(UV_mV_table);
+ define_one_rw(scaling_setspeed);
+ define_one_rw(scaling_setlog);
+ #if defined SET_AUDIO_LOG
+@@ -781,6 +802,7 @@
+ 	&affected_cpus.attr,
+ 	&related_cpus.attr,
+ 	&scaling_governor.attr,
++	&UV_mV_table.attr,
+ 	&scaling_driver.attr,
+ 	&scaling_available_governors.attr,
+ 	&scaling_setspeed.attr,
